@@ -36,8 +36,6 @@ data "template_file" "gitlab_install" {
     gitlab_db_user       = "${lookup(module.secrets.secret, "gitlab_db_user")}"
     gitlab_db_pass       = "${lookup(module.secrets.secret, "gitlab_db_pass")}"
     gitlab_db_endpoint   = "${module.gitlab_db.instance_address}"
-    lambda_function_name = "${var.lambda_function_name}"
-
   }
 }
 
