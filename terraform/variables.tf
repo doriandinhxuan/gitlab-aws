@@ -52,6 +52,7 @@ variable "tags" {
   }
   description = "Additional tags (e.g. `map('BusinessUnit`,`XYZ`)"
 }
+
 variable "enabled" {
   type        = "string"
   description = "Whether to create the resources. Set to `false` to prevent the module from creating any resources"
@@ -209,7 +210,6 @@ variable gitlab_runner_egress_rules {
   default = []
 }
 
-
 variable "gitlab_runner_instance_role" {
   default = ""
 }
@@ -266,6 +266,7 @@ variable depends_on {
   description = "This is a hacky workaround for getting Terraform to do module dependencies"
   default     = []
 }
+
 variable rds_tags {
   type    = "map"
   default = {}
@@ -274,14 +275,17 @@ variable sgroup_tags {
   type    = "map"
   default = {}
 }
+
 variable og_tags {
   type    = "map"
   default = {}
 }
+
 variable sg_tags {
   type    = "map"
   default = {}
 }
+
 variable deletion_protection {
   default = false
 }
@@ -293,30 +297,38 @@ variable db_sg_subnet_ids {
 variable rds_secret_arn {
   default = ""
 }
+
 variable identifier {
   default = ""
 }
+
 variable database_name {
   default = ""
 }
+
 variable database_user {
   default = ""
 }
+
 variable database_password {
   default = ""
 }
 variable database_port {
   default = ""
 }
+
 variable engine {
   default = ""
 }
+
 variable engine_version {
   default = ""
 }
+
 variable instance_class {
   default = ""
 }
+
 variable allocated_storage {
   default = 30
 }
@@ -324,66 +336,87 @@ variable allocated_storage {
 variable "max_allocated_storage" {
   default = 50
 }
+
 variable storage_encrypted {
   default = false
 }
+
 variable multi_az {
   default = false
 }
+
 variable storage_type {
   default = ""
 }
+
 variable iops {
   default = ""
 }
+
 variable publicly_accessible {
   default = false
 }
+
 variable snapshot_identifier {
   default = ""
 }
+
 variable allow_major_version_upgrade {
   default = false
 }
+
 variable auto_minor_version_upgrade {
   default = false
 }
+
 variable major_engine_version {
   default = ""
 }
+
 variable family {
   default = ""
 }
+
 variable "parameter_group_name" {
   default     = ""
 }
+
 variable db_subnet_group_name {
   default = ""
 }
+
 variable db_subnet_group_description {
   default = ""
 }
+
 variable db_sg_name {
   default = ""
 }
+
 variable option_group_name {
   default = ""
 }
+
 variable apply_immediately {
   default = false
 }
+
 variable maintenance_window {
   default = ""
 }
+
 variable skip_final_snapshot {
   default = true
 }
+
 variable copy_tags_to_snapshot {
   default = true
 }
+
 variable backup_retention_period {
   default = 0
 }
+
 variable backup_window {
   default = ""
 }
@@ -391,6 +424,7 @@ variable backup_window {
 variable db_ingress_rules {
   default = []
 }
+
 variable db_egress_rules {
   default = []
 }
